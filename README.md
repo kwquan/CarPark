@@ -135,5 +135,9 @@ How I did it is as follows: <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/dbt_process.png) <br>
 
 ### Looker
-Finally, 
+![alt text](https://github.com/kwquan/CarPark/blob/main/looker.png) <br>
+Finally, visualize the results using Looker[See above] <br>
   
+![alt text](https://github.com/kwquan/CarPark/blob/main/looker_2.png) <br>
+One can examine the prediction_errors[See above] <br>
+The above example shows that 'MARITIME SQUARED D OFF STREET' has the least error[for those Development displayed] 
