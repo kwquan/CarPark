@@ -86,8 +86,8 @@ _create_external_table(): <br>
   a) Similar to above, this function uses the Bigquery hook to create an external table[RawAvail] by collating all blobs in the GCS bucket <br>
   b) Please change source_uris to your naming convention
   
-run dbt: 
-This is where it gets a bit tricky. We need to create a virtual env in the Docker container & pip install all our dependencies[dbt-bigquery etc].
+run dbt: <br> 
+This is where it gets a bit tricky. We need to create a virtual env in the Docker container & pip install all our dependencies[dbt-bigquery etc]. <br>
 How I did it is as follows: <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/volume.png) <br>
   a) In docker-compose.yaml, I created another volume[before deployment] to store my virtual env[See above] <br>
