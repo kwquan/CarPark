@@ -47,4 +47,9 @@ This project is an end-to-end ELT pipeline that does the following:
 3) Place CleanAvail.sql in models[outside of dim folder][See above] <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/credentials.png) <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/credentials_2.png) <br>
-4) For connecting Airflow to GCP account, I created a gcp_config folder under dbt folder & pointed the keyfile to credentials <br> folder[credentials/credentials.json][See above] 
+4) For connecting Airflow to GCP account, I created a gcp_config folder under dbt folder & pointed the keyfile to credentials <br> folder[credentials/credentials.json][See above] <br>
+![alt text](https://github.com/kwquan/CarPark/blob/main/docker-compose.png) <br>
+![alt text](https://github.com/kwquan/CarPark/blob/main/docker-compose_2.png) <br>
+5) Open up a terminal[I'm using VisualStudioCode], cd to folder containing dags[materials folder in above example] <br>
+6) In terminal, run 'docker compose up -d' <br>
+7) If successful, you should see the following blue messages[See above] <br>
