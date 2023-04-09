@@ -88,7 +88,7 @@ _create_external_table(): <br>
   
 run dbt: <br>  
 This is where it gets a bit tricky. We need to create a virtual env in the Docker container & pip install all our dependencies[dbt-bigquery etc].
-How I did it is as follows:
+How I did it is as follows: <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/volume.png) <br>
   a) In docker-compose.yaml, I created another volume[before deployment] to store my virtual env[See above] <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/run_dbt.png) <br>
