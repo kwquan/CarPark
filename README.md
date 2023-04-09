@@ -131,4 +131,9 @@ How I did it is as follows: <br>
     ![alt text](https://github.com/kwquan/CarPark/blob/main/final_result.png) <br>
     d) In BigQuery, you should see the above[Note that there should only be 500 rows]
   
+### DBT Process
+![alt text](https://github.com/kwquan/CarPark/blob/main/dbt_process.png) <br>
+
+### Looker
+Finally, 
   
