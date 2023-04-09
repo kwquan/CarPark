@@ -13,7 +13,7 @@ This project is an end-to-end ELT pipeline that does the following:
 6) Runs DBT to create CleanAvail, FinalAvail 
 7) Checks for sufficient data
 8) [IF INSUFFICIENT DATA]: print 'insufficient records!' message
-9) [IF SUFFICIENT DATA]: <br>
+9) [IF SUFFICIENT DATA]: 
   a) Get unique records[group by CarParkID, Area, Development, LotType, Agency, Date, IsWeekDay, Hour] <br>
   b) Create istrain column based on Date & Hour <br>
   c) Using training data[istrain=1], create label column[AvgAvailableLots][group by Area, Development, LotType, Agency, IsWeekDay, Hour] <br>
@@ -23,7 +23,7 @@ This project is an end-to-end ELT pipeline that does the following:
   e) Separate & save them to training & testing dataframes[dataframe_train.csv,dataframe_pred.csv] <br>
   g) Train RandomForestRegressor in training dataframe  <br>
   h) Save trained model to pickle file[model_pkl] <br>
-10) [IF ONE SUCCESS]: <br>
+10) [IF ONE SUCCESS]: 
   a) Load trained model[model_pkl] <br>
   b) Read temp & pred dataframes[temp.csv,dataframe_pred.csv] <br>
   c) Predict model on pred dataframe <br>
@@ -33,7 +33,7 @@ This project is an end-to-end ELT pipeline that does the following:
   g) Save to CSV[pred_results.csv] <br>
   h) Create GCS bucket if not exist[for storing predicted results] <br>
   i) Push data to bucket as pred.csv <br>
-11) [IF ONE SUCCESS]: <br>
+11) [IF ONE SUCCESS]: 
   a) Create Bigquery external table[PredictAvail][using prediction results in GCS bucket] <br>
   b) DBT run in STEP 6 will do a left join of RefAvail on PredictAvail to create ResultsAvail table <br>
 12) Visualize results using Looker
