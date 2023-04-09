@@ -62,6 +62,14 @@ This project is an end-to-end ELT pipeline that does the following:
 1) Place carpark_dag.py under dags folder[See above]
 
 ### About the dag
-
-Below is an explanation on how the dag works
-
+Below is an explanation on how the dag works <br>
+_get_request(ti): 
+![alt text](https://github.com/kwquan/CarPark/blob/main/account_key.png) <br>
+  a) Connects to gcp using AccountKey. Please change it to yours[See above] <br>
+  b) Get current Date, Day & Time using datetime module <br>
+  c) Call LTA API & save results as CSV[carpark_data.csv] <br>
+  d) Creates GCS bucket if not exists <br>
+  e) Get current time up to seconds & save as time variable <br>
+  e) Push data to GCS bucket <br>
+  f) Finally, push time as xcom value
+  
