@@ -12,7 +12,7 @@ This project is an end-to-end ELT pipeline that does the following:
 5) Creates Bigquery external table[RawAvail] by collating all blobs in GCS bucket
 6) Runs DBT to create CleanAvail, FinalAvail 
 7) Checks for sufficient data
-8) [IF INSUFFICIENT DATA]: print 'insufficient records!' message
+8) [IF INSUFFICIENT DATA]: print 'insufficient records!' message <br>
 [BELOW STEPS IF SUFFICIENT DATA] <br>
 9) [IF SUFFICIENT DATA]: <br>
   a) Get unique records[group by CarParkID, Area, Development, LotType, Agency, Date, IsWeekDay, Hour] <br>
