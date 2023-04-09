@@ -46,4 +46,5 @@ This project is an end-to-end ELT pipeline that does the following:
 2) Place FinalAvail.sql & ResultsAvail.sql in dim folder[models > dim][See above] <br>
 3) Place CleanAvail.sql in models[outside of dim folder][See above] <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/credentials.png) <br>
+![alt text](https://github.com/kwquan/CarPark/blob/main/credentials_2.png) <br>
 4) For connecting Airflow to GCP account, I created a gcp_config folder under dbt folder & pointed the keyfile to credentials <br> folder[credentials/credentials.json][See above] 
