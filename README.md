@@ -98,4 +98,14 @@ How I did it is as follows: <br>
   e) The --profiles-dir is required to point to my gcp profile on Airflow volume instead of local machine[change accordingly] <br>
   f) Alternatively, use || to chain both bash command together. This way, bash will try to run the command in step e. If it fails, then it will do the installations in step c 
  
+ _check_data(): <br>
+  a) Branch operator that checks for sufficient records before starting model training <br>
+  b) Here, I check for at least 500 records[grouped by IsWeekDay, Hour in FinalAvail table] <br>
+  c) If yes, we return 'train_model', else return 'print_message' 
+  
+  _train_model(ti): <br>
+    a) Start by importing sklearn. Note that we import in this function, NOT outside as virtual env needs to be activated first <br>
+    b) Get current_date, current_hour & current_hour_type <br>
+    c) Using Bigquery hook, get dataframe from FinalAvail table after removing duplicates[group by CarParkID, Area, Development, LotType, Agency, Date, IsWeekDay, Hour]. We could have used distinct[but currently not supported by BQ hook] <br>
+  
   
