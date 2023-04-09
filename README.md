@@ -120,7 +120,7 @@ How I did it is as follows: <br>
       c3) Run model predict on dataframe_pred <br>
       c4) Round off prediction as new column 'predicted_avail' <br>
       c5) Concat result with temp <br>
-      c6) Filter for specific columns as save as pred_results.csv <br>
+      c6) Filter for specific columns & save as pred_results.csv <br>
       c7) Create ANOTHER bucket if not exists[for storing predicted results] <br>
       c8) Push result to bucket as pred.csv <br>
       
