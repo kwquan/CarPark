@@ -53,3 +53,6 @@ This project is an end-to-end ELT pipeline that does the following:
 5) Open up a terminal[I'm using VisualStudioCode], cd to folder containing dags[materials folder in above example] <br>
 6) In terminal, run 'docker compose up -d' <br>
 7) If successful, you should see the following blue messages[See above] <br>
+![alt text](https://github.com/kwquan/CarPark/blob/main/airflow.png) <br>
+8) Login to Airflow on your localhost[mine is 8080] & you should see the following[See Above] <br>
+9) Note that I named the dag as carpark.dag 
