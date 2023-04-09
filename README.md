@@ -21,9 +21,9 @@ This project is an end-to-end ELT pipeline that does the following:
   d) Left join grouped results on dataframe[on Area, Development, LotType, Agency, IsWeekDay, Hour] <br>
   e) For prediction data[istrain=0], save a copy as CSV[temp.csv] <br>
   f) Create one-hot encoded columns <br>
-  e) Separate & save them to training & testing dataframes[dataframe_train.csv,dataframe_pred.csv] <br>
-  g) Train RandomForestRegressor in training dataframe  <br>
-  h) Save trained model to pickle file[model_pkl] <br>
+  g) Separate & save them to training & testing dataframes[dataframe_train.csv,dataframe_pred.csv] <br>
+  h) Train RandomForestRegressor using training dataframe  <br>
+  i) Save trained model to pickle file[model_pkl] <br>
 10) [IF ONE SUCCESS]: <br>
   a) Load trained model[model_pkl] <br>
   b) Read temp & pred dataframes[temp.csv,dataframe_pred.csv] <br>
