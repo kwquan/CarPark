@@ -111,4 +111,22 @@ How I did it is as follows: <br>
   Flow Chart[_train_model] <br>
   ![alt text](https://github.com/kwquan/CarPark/blob/main/train_model.png) <br>
   
+  _predict_model(ti): <br>
+    a) Pull xcom key to_predict <br>
+    b) If false, return 'No Prediction' <br>
+    c) Else, do the following: <br>
+      c1) Load model_pkl <br>
+      c2) Read temp.csv & dataframe_pred.csv <br>
+      c3) Run model predict on dataframe_pred <br>
+      c4) Round off prediction as new column 'predicted_avail' <br>
+      c5) Concat result with temp <br>
+      c6) Filter for specific columns as save as pred_results.csv <br>
+      c7) Create ANOTHER bucket if not exists[for storing predicted results] <br>
+      c8) Push result to bucket as pred.csv <br>
+      
+  _create_external_result_table(): <br>
+    a) Following the push of prediction results to the new bucket <br>
+    b) Create ANOTHER external table[PredictAvail] using Bigquery hook <br>
+    c) The run dbt step[See above] will join PredictAvail & RefAvail to create ResultsAvail[our FINAL table]
+  
   
