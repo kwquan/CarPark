@@ -41,9 +41,9 @@ This project is an end-to-end ELT pipeline that does the following:
 
 ### Starting up Airflow
 
-1) Ensure you have Airflow installed
-![alt text](https://github.com/kwquan/CarPark/blob/main/models.png)
-2) Place FinalAvail.sql & ResultsAvail.sql in dim folder[models > dim][See above]
-3) Place CleanAvail.sql in models[outside of dim folder][See above]
-![alt text](https://github.com/kwquan/CarPark/blob/main/credentials.png)
-4) For connecting Airflow to GCP account, I created a gcp_config folder under dbt folder & pointed the keyfile to credentials folder[credentials/credentials.json][See above] 
+1) Ensure you have Airflow installed <br>
+![alt text](https://github.com/kwquan/CarPark/blob/main/models.png) <br>
+2) Place FinalAvail.sql & ResultsAvail.sql in dim folder[models > dim][See above] <br>
+3) Place CleanAvail.sql in models[outside of dim folder][See above] <br>
+![alt text](https://github.com/kwquan/CarPark/blob/main/credentials.png) <br>
+4) For connecting Airflow to GCP account, I created a gcp_config folder under dbt folder & pointed the keyfile to credentials <br> folder[credentials/credentials.json][See above] 
