@@ -76,10 +76,10 @@ _get_request(ti):
  _create_ref_external_table(ti): <br>
   a) In Airflow, go to Admin > Connections
 ![alt text](https://github.com/kwquan/CarPark/blob/main/gcp_db.png) <br>
-  b) Create connection to GCP[See above]
-  c) Please edit details as per your own
-  d) The above function will use Bigquery hook to create an external table[RefAvail] using the latest blob
-  e) Latest blob name is obtained by pulling xcom time variable from previous function
-  f) The external table is required to join back the other details of latest prediction data later on
+  b) Create connection to GCP[See above] <br>
+  c) Please edit details as per your own <br>
+  d) The above function will use Bigquery hook to create an external table[RefAvail] using the latest blob <br>
+  e) Latest blob name is obtained by pulling xcom time variable from previous function <br>
+  f) The external table is required to join back the other details of latest prediction data later on <br>
  
   
