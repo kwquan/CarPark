@@ -39,7 +39,7 @@ This project is an end-to-end ELT pipeline that does the following:
   b) DBT run in STEP 6 will do a left join of RefAvail on PredictAvail to create ResultsAvail table <br>
 12) Visualize results using Looker
 
-### Starting up Airflow
+### Setting up Airflow
 
 1) Ensure you have Airflow installed <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/models.png) <br>
@@ -56,3 +56,12 @@ This project is an end-to-end ELT pipeline that does the following:
 ![alt text](https://github.com/kwquan/CarPark/blob/main/airflow.png) <br>
 8) Login to Airflow on your localhost[mine is 8080] & you should see the following[See Above] <br>
 9) Note that I named the dag as carpark.dag 
+
+### Setting up carpark_dag.py
+![alt text](https://github.com/kwquan/CarPark/blob/main/carpark_dag.png) <br>
+1) Place carpark_dag.py under dags folder[See above]
+
+### About the dag
+
+Below is an explanation on how the dag works
+
