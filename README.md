@@ -64,6 +64,7 @@ This project is an end-to-end ELT pipeline that does the following:
 ### About the dag
 Below is an explanation on how the dag works <br>
 _get_request(ti): 
+
 ![alt text](https://github.com/kwquan/CarPark/blob/main/account_key.png) <br>
   a) Connects to gcp using AccountKey. Please change it to yours[See above] <br>
   b) Get current Date, Day & Time using datetime module <br>
