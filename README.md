@@ -38,3 +38,11 @@ This project is an end-to-end ELT pipeline that does the following:
   a) Create Bigquery external table[PredictAvail][using prediction results in GCS bucket] <br>
   b) DBT run in STEP 6 will do a left join of RefAvail on PredictAvail to create ResultsAvail table <br>
 12) Visualize results using Looker
+
+### Starting up Airflow
+1) Ensure you have Airflow installed
+![alt text](https://github.com/kwquan/CarPark/blob/main/models.png)
+2) Place FinalAvail.sql & ResultsAvail.sql in dim folder[models > dim][See above]
+3) Place CleanAvail.sql in models[outside of dim folder][See above]
+![alt text](https://github.com/kwquan/CarPark/blob/main/credentials.png)
+4) For connecting Airflow to GCP account, I created a gcp_config folder under dbt folder & pointed the keyfile to credentials folder[credentials/credentials.json][See above] 
