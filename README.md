@@ -64,7 +64,6 @@ This project is an end-to-end ELT pipeline that does the following:
 ### About the dag
 Below is an explanation on how the dag works <br>
 _get_request(ti): 
-
 ![alt text](https://github.com/kwquan/CarPark/blob/main/account_key.png) <br>
   a) Connects to gcp using AccountKey. Please change it to yours[See above] <br>
   b) Get current Date, Day & Time using datetime module <br>
@@ -73,4 +72,14 @@ _get_request(ti):
   e) Get current time up to seconds & save as time variable <br>
   e) Push data to GCS bucket <br>
   f) Finally, push time as xcom value
+ 
+ _create_ref_external_table(ti):
+  a) In Airflow, go to Admin > Connections
+![alt text](https://github.com/kwquan/CarPark/blob/main/gcp_db.png) <br>
+  b) Create connection to GCP[See above]
+  c) Please edit details as per your own
+  d) The above function will use Bigquery hook to create an external table[RefAvail] using the latest blob
+  e) Latest blob name is obtained by pulling xcom time variable from previous function
+  f) The external table is required to join back the other details of latest prediction data later on
+ 
   
