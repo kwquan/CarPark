@@ -128,5 +128,7 @@ How I did it is as follows: <br>
     a) Following the push of prediction results to the new bucket <br>
     b) Create ANOTHER external table[PredictAvail] using Bigquery hook <br>
     c) The run dbt step[See above] will join PredictAvail & RefAvail to create ResultsAvail[our FINAL table]
+    ![alt text](https://github.com/kwquan/CarPark/blob/main/final_result.png) <br>
+    d) In BigQuery, you should see the above[Note that there should only be 500 rows]
   
   
