@@ -73,7 +73,7 @@ _get_request(ti):
   e) Push data to GCS bucket <br>
   f) Finally, push time as xcom value
  
- _create_ref_external_table(ti):
+ _create_ref_external_table(ti): <br>
   a) In Airflow, go to Admin > Connections
 ![alt text](https://github.com/kwquan/CarPark/blob/main/gcp_db.png) <br>
   b) Create connection to GCP[See above]
