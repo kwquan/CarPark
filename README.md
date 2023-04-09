@@ -55,7 +55,7 @@ This project is an end-to-end ELT pipeline that does the following:
 7) If successful, you should see the following blue messages[See above] <br>
 ![alt text](https://github.com/kwquan/CarPark/blob/main/airflow.png) <br>
 8) Login to Airflow on your localhost[mine is 8080] & you should see the following[See Above] <br>
-9) Note that I named the dag as carpark.dag 
+9) Note that I named the dag as carpark_dag 
 
 ### Setting up carpark_dag.py
 ![alt text](https://github.com/kwquan/CarPark/blob/main/carpark_dag.png) <br>
