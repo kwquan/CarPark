@@ -40,6 +40,7 @@ This project is an end-to-end ELT pipeline that does the following:
 12) Visualize results using Looker
 
 ### Starting up Airflow
+
 1) Ensure you have Airflow installed
 ![alt text](https://github.com/kwquan/CarPark/blob/main/models.png)
 2) Place FinalAvail.sql & ResultsAvail.sql in dim folder[models > dim][See above]
