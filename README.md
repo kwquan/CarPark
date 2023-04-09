@@ -136,6 +136,10 @@ How I did it is as follows: <br>
 ### DBT Process
 ![alt text](https://github.com/kwquan/CarPark/blob/main/dbt_process.png) <br>
 
+### Airflow Run
+Once everything is ready, go to Airflow & run DAG. <br>
+If everything works, you should see the exact picture[Top diagram] under 'Graph' view <br>
+
 ### Looker
 ![alt text](https://github.com/kwquan/CarPark/blob/main/looker.png) <br>
 Finally, visualize the results using Looker[See above] <br>
