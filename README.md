@@ -1,7 +1,7 @@
 # LTA CarPark Availability 
 
 ### Intro
-
+![alt text](https://github.com/kwquan/CarPark/blob/main/process.png)
 Tools: Airflow, Docker, DBT, GCP
 
 This project is an end-to-end ELT pipeline that does the following:
