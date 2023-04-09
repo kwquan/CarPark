@@ -107,5 +107,8 @@ How I did it is as follows: <br>
     a) Start by importing sklearn. Note that we import in this function, NOT outside as virtual env needs to be activated first <br>
     b) Get current_date, current_hour & current_hour_type <br>
     c) Using Bigquery hook, get dataframe from FinalAvail table after removing duplicates[group by CarParkID, Area, Development, LotType, Agency, Date, IsWeekDay, Hour]. We could have used distinct[but currently not supported by BQ hook] <br>
+    
+  Flow Chart[_train_model] <br>
+  ![alt text](https://github.com/kwquan/CarPark/blob/main/train_model.png) <br>
   
   
