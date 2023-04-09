@@ -81,5 +81,21 @@ _get_request(ti):
   d) The above function will use Bigquery hook to create an external table[RefAvail] using the latest blob <br>
   e) Latest blob name is obtained by pulling xcom time variable from previous function <br>
   f) The external table is required to join back the other details of latest prediction data later on <br>
+  
+_create_external_table(): <br>
+  a) Similar to above, this function uses the Bigquery hook to create an external table[RawAvail] by collating all blobs in the GCS bucket <br>
+  b) Please change source_uris to your naming convention
+  
+run dbt: <br>  
+This is where it gets a bit tricky. We need to create a virtual env in the Docker container & pip install all our dependencies[dbt-bigquery etc].
+How I did it is as follows:
+![alt text](https://github.com/kwquan/CarPark/blob/main/volume.png) <br>
+  a) In docker-compose.yaml, I created another volume[before deployment] to store my virtual env[See above] <br>
+![alt text](https://github.com/kwquan/CarPark/blob/main/run_dbt.png) <br>
+  b) In the carpark_dag.py file, edit the bash command cd into the new volume, create virtual env[dbt-env], activate dbt-env & pip install dependencies <br>
+  c) 1 instance can be "cd ${AIRFLOW_HOME}/envs && virtualenv dbt-env -p python && source dbt-env/bin/activate && pip install dbt-bigquery && pip install sklearn" <br>
+  d) After installation, you can change the bash command to "cd ${AIRFLOW_HOME}/envs && source dbt-env/bin/activate && cd ${AIRFLOW_HOME}//dags/dbt/carpark && dbt run --profiles-dir ${AIRFLOW_HOME}/dags/gcp_profile" <br>
+  e) The --profiles-dir is required to point to my gcp profile on Airflow volume instead of local machine[change accordingly] <br>
+  f) Alternatively, use || to chain both bash command together. This way, bash will try to run the command in step e. If it fails, then it will do the installations in step c 
  
   
