@@ -13,27 +13,27 @@ This project is an end-to-end ELT pipeline that does the following:
 6) Runs DBT to create CleanAvail, FinalAvail 
 7) Checks for sufficient data
 8) [IF INSUFFICIENT DATA]: print 'insufficient records!' message
-9) [IF SUFFICIENT DATA]: 
-  a) Get unique records[group by CarParkID, Area, Development, LotType, Agency, Date, IsWeekDay, Hour]
-  b) Create istrain column based on Date & Hour
-  c) Using training data[istrain=1], create label column[AvgAvailableLots][group by Area, Development, LotType, Agency, IsWeekDay, Hour]
-  d) Left join grouped results on dataframe[on Area, Development, LotType, Agency, IsWeekDay, Hour]
-  e) For prediction data[istrain=0], save a copy as CSV[temp.csv]
-  f) Create one-hot encoded columns
-  e) Separate & save them to training & testing dataframes[dataframe_train.csv,dataframe_pred.csv]
-  g) Train RandomForestRegressor in training dataframe 
-  h) Save trained model to pickle file[model_pkl]
-10) [IF ONE SUCCESS]: 
-  a) Load trained model[model_pkl]
-  b) Read temp & pred dataframes[temp.csv,dataframe_pred.csv]
-  c) Predict model on pred dataframe
-  d) Round up results & save as predicted_avail column
-  e) Concatenate resulting dataframe[to_pred] & temp dataframe together
-  f) Filter for specific columns[CarParkID, Area, Development, LotType, Agency, Date, IsWeekDay, Hour,predicted_avail]
-  g) Save to CSV[pred_results.csv]
-  h) Create GCS bucket if not exist[for storing predicted results]
-  i) Push data to bucket as pred.csv
-11) [IF ONE SUCCESS]: 
-  a) Create Bigquery external table[PredictAvail][using prediction results in GCS bucket]
-  b) DBT run in STEP 6 will do a left join of RefAvail on PredictAvail to create ResultsAvail table
+9) [IF SUFFICIENT DATA]: <br>
+  a) Get unique records[group by CarParkID, Area, Development, LotType, Agency, Date, IsWeekDay, Hour] <br>
+  b) Create istrain column based on Date & Hour <br>
+  c) Using training data[istrain=1], create label column[AvgAvailableLots][group by Area, Development, LotType, Agency, IsWeekDay, Hour] <br>
+  d) Left join grouped results on dataframe[on Area, Development, LotType, Agency, IsWeekDay, Hour] <br>
+  e) For prediction data[istrain=0], save a copy as CSV[temp.csv] <br>
+  f) Create one-hot encoded columns <br>
+  e) Separate & save them to training & testing dataframes[dataframe_train.csv,dataframe_pred.csv] <br>
+  g) Train RandomForestRegressor in training dataframe  <br>
+  h) Save trained model to pickle file[model_pkl] <br>
+10) [IF ONE SUCCESS]: <br>
+  a) Load trained model[model_pkl] <br>
+  b) Read temp & pred dataframes[temp.csv,dataframe_pred.csv] <br>
+  c) Predict model on pred dataframe <br>
+  d) Round up results & save as predicted_avail column <br>
+  e) Concatenate resulting dataframe[to_pred] & temp dataframe together <br>
+  f) Filter for specific columns[CarParkID, Area, Development, LotType, Agency, Date, IsWeekDay, Hour,predicted_avail] <br>
+  g) Save to CSV[pred_results.csv] <br>
+  h) Create GCS bucket if not exist[for storing predicted results] <br>
+  i) Push data to bucket as pred.csv <br>
+11) [IF ONE SUCCESS]: <br>
+  a) Create Bigquery external table[PredictAvail][using prediction results in GCS bucket] <br>
+  b) DBT run in STEP 6 will do a left join of RefAvail on PredictAvail to create ResultsAvail table <br>
 12) Visualize results using Looker
