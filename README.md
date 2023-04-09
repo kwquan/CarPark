@@ -130,6 +130,8 @@ How I did it is as follows: <br>
     c) The run dbt step[See above] will join PredictAvail & RefAvail to create ResultsAvail[our FINAL table]
     ![alt text](https://github.com/kwquan/CarPark/blob/main/final_result.png) <br>
     d) In BigQuery, you should see the above[Note that there should only be 500 rows]
+    ![alt text](https://github.com/kwquan/CarPark/blob/main/final_result_2.png) <br>
+    e) prediction error is calculated by taking difference between actual availability & predicted availability[See above]
   
 ### DBT Process
 ![alt text](https://github.com/kwquan/CarPark/blob/main/dbt_process.png) <br>
@@ -140,4 +142,7 @@ Finally, visualize the results using Looker[See above] <br>
   
 ![alt text](https://github.com/kwquan/CarPark/blob/main/looker_2.png) <br>
 One can examine the prediction_errors[See above] <br>
-The above example shows that 'MARITIME SQUARED D OFF STREET' has the least error[for those Development displayed] 
+The above example shows that 'MARITIME SQUARE D OFF STREET' has the least error[for those Development displayed] 
+
+
+
